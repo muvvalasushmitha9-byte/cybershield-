@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-midnight: #081426;
+    --color-ocean: #102B50;
+    --color-electric: #3478F6;
+    --color-cyan: #45E6F5;
+    --color-white: #F4F8FF;
+    --color-steel: #9CB1CD;
+    --color-violet: #9275FF;
+  }
+
+  body {
+    background-color: #081426;
+    color: #F4F8FF;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #081426;
+}
+::-webkit-scrollbar-thumb {
+  background: #102B50;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3478F6;
+}
+
+/* Cybersecurity cyber-grid background */
+.cyber-grid {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(69, 230, 245, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(69, 230, 245, 0.04) 1px, transparent 1px);
+}
+
+.cyber-radial-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(52, 120, 246, 0.15) 0%, rgba(8, 20, 38, 0.95) 70%);
+}
+
+/* Velvet Theatrical Curtain Gradients & Folds */
+.curtain-fabric-left {
+  background: linear-gradient(
+    90deg,
+    #050d1a 0%,
+    #0a1930 15%,
+    #081426 30%,
+    #102B50 45%,
+    #0a182f 60%,
+    #13315c 75%,
+    #081426 88%,
+    #030914 100%
+  );
+  box-shadow: inset -25px 0 50px rgba(0,0,0,0.8), 10px 0 35px rgba(0,0,0,0.9);
+}
+
+.curtain-fabric-right {
+  background: linear-gradient(
+    90deg,
+    #030914 0%,
+    #081426 12%,
+    #13315c 25%,
+    #0a182f 40%,
+    #102B50 55%,
+    #081426 70%,
+    #0a1930 85%,
+    #050d1a 100%
+  );
+  box-shadow: inset 25px 0 50px rgba(0,0,0,0.8), -10px 0 35px rgba(0,0,0,0.9);
+}
+
+/* Vertical curtain fold effect */
+.curtain-folds {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 30px,
+    rgba(0, 0, 0, 0.4) 30px,
+    rgba(0, 0, 0, 0.4) 60px,
+    rgba(69, 230, 245, 0.04) 60px,
+    rgba(69, 230, 245, 0.04) 90px
+  );
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}
+
+/* Radar sweep animation */
+@keyframes radarSweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-radar {
+  animation: radarSweep 6s linear infinite;
+}
